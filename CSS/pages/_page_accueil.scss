@@ -1,0 +1,82 @@
+/*section top-section*/
+.top-section{
+    background: #d3d3d3;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &__localisation{
+        display: flex;
+        text-align: center;
+        margin: 1px auto 0;
+    &__button{
+        color: white;
+        background: $colour-tertiary;
+        border: 0px solid black;
+        border-radius: 50%;
+    }    
+    }
+}
+
+/*section fonction*/
+.fonction{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin: 70px auto 0px;
+    &__btn{
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        border-radius: 25px;
+        background-color: #d3d3d3;
+        width: 300px;
+        height: 60px;
+        padding: 20px 60px 20px 0px;
+        margin-top: 20px;
+        .btn__number{
+            color: white;
+            background: $colour-primary;
+            border: 0px solid black;
+            border-radius: 50%;
+            padding: 5px 10px 25px 10px;
+
+        }
+        
+    }
+}
+/*section restaurant*/
+.restaurant{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #d3d3d3;
+    width: 100%;
+    margin: 70px auto 0px;
+    }
+    
+.restaurant__title{
+    align-items: flex-start;
+    padding-bottom: 10px;
+}
+.card{
+        align-items: center;
+        background: white;
+        border-radius: 5%;
+        width: 300px;
+        height: 200px;
+        margin:10px;
+        overflow: hidden;
+        flex-shrink: 0;
+        img{
+            width: 300px;
+            height: 150px;
+        &__name{
+            font-weight: bold;
+        }    
+        }
+        }

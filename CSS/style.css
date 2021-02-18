@@ -15,11 +15,162 @@
   font-style: normal;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "roboto", "Arial", "Helvetica", "sans-serif";
+  height: 100vh;
 }
 
 h1 .logo {
   font-family: "shrikhand", "Arial", "Helvetica", "sans-serif";
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer {
+  color: white;
+  background-color: black;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/*section top-section*/
+.top-section {
+  background: #d3d3d3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.top-section__localisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  margin: 1px auto 0;
+}
+
+.top-section__localisation__button {
+  color: white;
+  background: #99E2D0;
+  border: 0px solid black;
+  border-radius: 50%;
+}
+
+/*section fonction*/
+.fonction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  margin: 70px auto 0px;
+}
+
+.fonction__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 25px;
+  background-color: #d3d3d3;
+  width: 300px;
+  height: 60px;
+  padding: 20px 60px 20px 0px;
+  margin-top: 20px;
+}
+
+.fonction__btn .btn__number {
+  color: white;
+  background: #9356DC;
+  border: 0px solid black;
+  border-radius: 50%;
+  padding: 5px 10px 25px 10px;
+}
+
+/*section restaurant*/
+.restaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #d3d3d3;
+  width: 100%;
+  margin: 70px auto 0px;
+}
+
+.restaurant__title {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 10px;
+}
+
+.card {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  border-radius: 5%;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  overflow: hidden;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.card img {
+  width: 300px;
+  height: 150px;
+}
+
+.card img__name {
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */
