@@ -72,14 +72,14 @@ h1 .logo {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  margin: 1px auto 0;
+  margin: 10px;
+  margin: 10px;
 }
 
-.top-section__localisation__button {
+.top-section__localisation__btn {
   color: white;
   background: #99E2D0;
-  border: 0px solid black;
-  border-radius: 50%;
+  margin: 10px;
 }
 
 /*section fonction*/
