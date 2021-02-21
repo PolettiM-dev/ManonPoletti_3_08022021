@@ -75,10 +75,23 @@ h1 .logo {
   margin: 10px;
 }
 
-.top-section__localisation__btn {
+.top-section__localisation input {
+  border: 0px;
+  background: #d3d3d3;
+  color: black;
+  text-align: center;
+}
+
+.top-section__title {
+  padding: 15px;
+}
+
+.top-section__btn {
   color: white;
+  border-radius: 25px;
   background: #99E2D0;
-  margin: 10px;
+  margin: 20px;
+  padding: 15px;
 }
 
 /*section fonction*/
@@ -121,6 +134,9 @@ h1 .logo {
   border: 0px solid black;
   border-radius: 50%;
   padding: 5px 10px 25px 10px;
+  position: relative;
+  right: 15px;
+  bottom: 5px;
 }
 
 /*section restaurant*/
@@ -164,12 +180,34 @@ h1 .logo {
       flex-shrink: 0;
 }
 
-.card img {
+.card__img {
+  position: relative;
+  z-index: 1;
+}
+
+.card__img img {
   width: 300px;
   height: 150px;
 }
 
-.card img__name {
+.card__img .new {
+  position: relative;
+  bottom: 130px;
+  left: 200px;
+  background: grey;
+  width: 80px;
+  text-align: center;
+}
+
+.card__name--new {
+  margin-top: -15px;
+}
+
+.card__name {
   font-weight: bold;
+}
+
+.card__name .far .fa-heart {
+  padding-left: 30px;
 }
 /*# sourceMappingURL=style.css.map */

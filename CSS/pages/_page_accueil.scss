@@ -10,12 +10,23 @@
         display: flex;
         text-align: center;
         margin: 10px;
+        input{
+            border:0px;
+            background: #d3d3d3;
+            color: black;
+            text-align: center;
+        }
+    }
+    &__title{
+        padding: 15px;
+    }
     &__btn{
         color: white;
+        border-radius: 25px;
         background: $colour-tertiary;
-        margin: 10px;
-        
-    }    
+        margin: 20px;
+        padding: 15px;
+           
     }
 }
 
@@ -43,6 +54,9 @@
             border: 0px solid black;
             border-radius: 50%;
             padding: 5px 10px 25px 10px;
+            position: relative;
+            right: 15px;
+            bottom: 5px;
 
         }
         
@@ -72,11 +86,31 @@
         margin:10px;
         overflow: hidden;
         flex-shrink: 0;
-        img{
+        &__img{
+            position: relative;
+            z-index: 1;
+            img{
             width: 300px;
             height: 150px;
+            } 
+            .new{
+            position: relative;
+            bottom: 130px;
+            left: 200px;
+            background: grey;
+            width: 80px;
+            text-align: center;
+            }
+        }
+        &__name--new{
+            margin-top: -15px;
+        }    
         &__name{
             font-weight: bold;
-        }    
+           
+            .far .fa-heart{
+                padding-left: 30px;
+            }
+           
         }
         }
