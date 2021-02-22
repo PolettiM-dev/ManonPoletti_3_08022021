@@ -1,6 +1,6 @@
 /*section top-section*/
 .top-section{
-    background: #d3d3d3;
+    background: #f6f6f6;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -12,7 +12,7 @@
         margin: 10px;
         input{
             border:0px;
-            background: #d3d3d3;
+            background: #eaeaea;
             color: black;
             text-align: center;
         }
@@ -23,11 +23,11 @@
     &__btn{
         color: white;
         border-radius: 25px;
-        background: $colour-tertiary;
+        background: $colour-secondary;
         margin: 20px;
-        padding: 15px;
-           
+        padding: 15px;    
     }
+    
 }
 
 /*section fonction*/
@@ -38,6 +38,9 @@
     align-items: center;
     height: auto;
     margin: 70px auto 0px;
+    &__title{
+        padding: 10px 120px 10px 0px; 
+    }
     &__btn{
         display: flex;
         text-align: center;
@@ -57,9 +60,10 @@
             position: relative;
             right: 15px;
             bottom: 5px;
-
-        }
-        
+        }   
+    }
+    &__btn a:hover{
+        background-color: #f5edff;
     }
 }
 /*section restaurant*/
@@ -71,13 +75,13 @@
     background: #d3d3d3;
     width: 100%;
     margin: 70px auto 0px;
-    }
     
-.restaurant__title{
+    
+    &__title{
     align-items: flex-start;
-    padding-bottom: 10px;
+    padding: 10px 180px 10px 0px;
 }
-.card{
+    .card{
         align-items: center;
         background: white;
         border-radius: 5%;
@@ -97,7 +101,8 @@
             position: relative;
             bottom: 130px;
             left: 200px;
-            background: grey;
+            color: green;
+            background: $colour-tertiary;
             width: 80px;
             text-align: center;
             }
@@ -107,10 +112,36 @@
         }    
         &__name{
             font-weight: bold;
-           
-            .far .fa-heart{
-                padding-left: 30px;
-            }
-           
+            padding-left: 5px;
+            .fa-heart{
+                padding-left: 120px;
+            } 
+        }
+        &__city{
+            padding-left: 5px;
         }
         }
+    }
+   @media screen and (min-width:768px){
+    .restaurant{
+        width: 80%;
+        &__title{
+            justify-content: center;
+        }
+        .card{
+            width: 500px;
+            height: 200px;
+            img{
+                width: 500px;
+                height: 150px;
+                } 
+                .new{
+                    left: 400px;   
+                    }
+                .fa-heart{
+                    padding-left: 300px;
+                    }        
+            } 
+
+    }      
+    }

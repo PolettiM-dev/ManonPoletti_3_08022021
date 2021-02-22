@@ -3,5 +3,25 @@
     color: white;
     background-color: black;
     align-items: flex-start;
+    img{
+        height: 15px;
+        width: 110px;
+        padding-top: 5px;
+    }
+    &__items{
+        padding: 5px;
+    }
+    &__items a{
+        color: white;
+        text-decoration: none;
+    }
     
+}
+@media screen and (min-width:500px){
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
