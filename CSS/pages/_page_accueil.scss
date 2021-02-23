@@ -1,3 +1,27 @@
+/*div localisation*/
+.localisation{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    background: #eaeaea;
+    height: 63px;
+    .fas .fa-map-marker-alt{
+        flex-direction: row;
+        position: relative;
+        top: 10px;
+    }
+    input{
+        border:0px;
+        background: #eaeaea;
+        color: black;
+        text-align: center;
+        width: 100%;  
+    }
+}
+
 /*section top-section*/
 .top-section{
     background: #f6f6f6;
@@ -6,28 +30,23 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    &__localisation{
-        display: flex;
-        text-align: center;
-        margin: 10px;
-        input{
-            border:0px;
-            background: #eaeaea;
-            color: black;
-            text-align: center;
-        }
-    }
+    height: 287px;
     &__title{
         padding: 15px;
     }
     &__btn{
         color: white;
         border-radius: 25px;
-        background: $colour-secondary;
+        background: linear-gradient($colour-secondary,$colour-primary);
         margin: 20px;
-        padding: 15px;    
-    }
-    
+        padding: 15px;
+        cursor: pointer;
+        transform: scale(1);
+        transition: transform 400ms;
+        &:hover{
+            transform:scale(1.15);
+        }    
+    } 
 }
 
 /*section fonction*/
@@ -46,11 +65,19 @@
         text-align: center;
         justify-content: space-around;
         border-radius: 25px;
-        background-color: #d3d3d3;
+        box-shadow: 10px #ececec;
+        background-color: #f6f6f6;
         width: 300px;
         height: 60px;
         padding: 20px 60px 20px 0px;
         margin-top: 20px;
+        cursor: pointer;
+        transform: scale(1);
+        transition: transform 400ms;
+        &:hover{
+            background-color: #f5edff;
+            transform:scale(1.15);
+        }
         .btn__number{
             color: white;
             background: $colour-primary;
@@ -59,12 +86,13 @@
             padding: 5px 10px 25px 10px;
             position: relative;
             right: 15px;
-            bottom: 5px;
-        }   
+            bottom: 5px;    
+        } 
+        .fas:hover{
+            color: $colour-primary;
+        }  
     }
-    &__btn a:hover{
-        background-color: #f5edff;
-    }
+    
 }
 /*section restaurant*/
 .restaurant{
@@ -72,7 +100,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #d3d3d3;
+    background: #f6f6f6;
     width: 100%;
     margin: 70px auto 0px;
     
@@ -90,6 +118,12 @@
         margin:10px;
         overflow: hidden;
         flex-shrink: 0;
+        cursor: pointer;
+        transform: scale(1);
+        transition: transform 400ms;
+        &:hover{
+            transform: scale(1.15);
+        }
         &__img{
             position: relative;
             z-index: 1;
@@ -101,7 +135,7 @@
             position: relative;
             bottom: 130px;
             left: 200px;
-            color: green;
+            color: #008766;
             background: $colour-tertiary;
             width: 80px;
             text-align: center;
@@ -115,6 +149,9 @@
             padding-left: 5px;
             .fa-heart{
                 padding-left: 120px;
+            }
+            .fa-heart:active{
+                background: linear-gradient($colour-secondary,$colour-primary);
             } 
         }
         &__city{
@@ -122,26 +159,47 @@
         }
         }
     }
-   @media screen and (min-width:768px){
-    .restaurant{
-        width: 80%;
-        &__title{
-            justify-content: center;
-        }
+   @media screen and (min-width:768px)and (max-width:1024px){
         .card{
             width: 500px;
             height: 200px;
             img{
                 width: 500px;
                 height: 150px;
-                } 
+            } 
+            .new{
+                left: 400px;   
+            }
+            .fa-heart{
+                padding-left: 300px;
+            }        
+        } 
+    }
+    @media screen and (min-width:1024px){
+    .restaurant{
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &__title{
+            justify-content: center;
+            flex-direction: column;
+            flex-basis: 100%;
+            text-align: center;
+        }
+        .card{
+            width: 300px;
+            height: 200px;
+            img{
+                width: 300px;
+                height: 150px;
+            } 
                 .new{
-                    left: 400px;   
-                    }
+                    left: 200px;   
+                }
                 .fa-heart{
-                    padding-left: 300px;
-                    }        
+                    padding-left: 120px;
+                }        
             } 
 
-    }      
-    }
+        }      
+    }   
