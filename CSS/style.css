@@ -27,8 +27,10 @@ body {
   height: 100vh;
 }
 
-h1 .logo {
+.title {
   font-family: "shrikhand", "Arial", "Helvetica", "sans-serif";
+  font-size: x-large;
+  padding: 20px;
 }
 
 .logo {
@@ -50,7 +52,7 @@ h1 .logo {
 }
 
 .footer img {
-  height: 15px;
+  height: 20px;
   width: 110px;
   padding-top: 5px;
 }
@@ -380,5 +382,76 @@ h1 .logo {
   .restaurant .card .fa-heart {
     padding-left: 120px;
   }
+}
+
+/*div picture*/
+.picture img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 250px;
+  width: 100%;
+}
+
+/*section menu*/
+.menu {
+  background: #f6f6f6;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.menu .far.fa-heart {
+  position: relative;
+  left: 80px;
+}
+
+.menu .dish {
+  border-bottom: solid #99E2D0;
+  width: 40px;
+  margin-left: 10px;
+}
+
+.menu .items {
+  background: white;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.menu .items .name {
+  font-weight: bold;
+  font-size: large;
+  padding-bottom: 5px;
+}
+
+.menu .items .price {
+  position: relative;
+  bottom: 20px;
+  left: 280px;
+  font-weight: bold;
+}
+
+.menu .btn {
+  color: white;
+  text-align: center;
+  border-radius: 25px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  margin: 20px;
+  padding: 15px;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+}
+
+.menu .btn:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 /*# sourceMappingURL=style.css.map */
