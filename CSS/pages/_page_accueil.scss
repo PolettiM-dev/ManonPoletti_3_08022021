@@ -40,13 +40,14 @@
         background: linear-gradient($colour-secondary,$colour-primary);
         margin: 20px;
         padding: 15px;
+        box-shadow: 1px 1px 5px grey;
         cursor: pointer;
-        transform: scale(1);
-        transition: transform 400ms;
         &:hover{
-            transform:scale(1.15);
+            background: linear-gradient(to top left, #a16be0, #ff93e1);
+            box-shadow: 3px 3px 5px grey;
+        }
         }    
-    } 
+    
 }
 
 /*section fonction*/
@@ -108,22 +109,18 @@
     &__title{
     align-items: flex-start;
     padding: 10px 180px 10px 0px;
-}
+    }
     .card{
         align-items: center;
         background: white;
         border-radius: 5%;
+        position: relative;
         width: 300px;
         height: 200px;
         margin:10px;
         overflow: hidden;
         flex-shrink: 0;
         cursor: pointer;
-        transform: scale(1);
-        transition: transform 400ms;
-        &:hover{
-            transform: scale(1.15);
-        }
         &__img{
             position: relative;
             z-index: 1;
@@ -147,18 +144,33 @@
         &__name{
             font-weight: bold;
             padding-left: 5px;
-            .fa-heart{
-                padding-left: 120px;
-            }
-            .fa-heart:active{
-                background: linear-gradient($colour-secondary,$colour-primary);
-            } 
+        
         }
         &__city{
             padding-left: 5px;
         }
+        .far{
+            position: absolute;
+            right: 5px;
+            bottom: 3px;
         }
+            &:active{
+            display: none;
+            }
+        .full{
+            display: none;
+            
+        }
+            &:active{
+            display: inline;    
+            position: absolute;
+            right: 5px;
+            bottom: 3px;
+            color: linear-gradient($colour-secondary,$colour-primary); 
+            }
     }
+}
+
    @media screen and (min-width:768px)and (max-width:1024px){
         .card{
             width: 500px;
@@ -170,9 +182,12 @@
             .new{
                 left: 400px;   
             }
-            .fa-heart{
+            .far{
                 padding-left: 300px;
-            }        
+            }  
+            .fas:active{
+                padding-left: 300px;
+            }      
         } 
     }
     @media screen and (min-width:1024px){
@@ -196,9 +211,13 @@
                 .new{
                     left: 200px;   
                 }
-                .fa-heart{
+                .far{
                     padding-left: 120px;
-                }        
+                }
+                .fas{
+                    padding-left: 120px;
+                }
+                        
             } 
 
         }      

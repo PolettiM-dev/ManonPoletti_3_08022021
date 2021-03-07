@@ -152,18 +152,16 @@ body {
   background: linear-gradient(#FF79DA, #9356DC);
   margin: 20px;
   padding: 15px;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
   cursor: pointer;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
 }
 
 .top-section__btn:hover {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
+  background: -webkit-gradient(linear, right bottom, left top, from(#a16be0), to(#ff93e1));
+  background: linear-gradient(to top left, #a16be0, #ff93e1);
+  -webkit-box-shadow: 3px 3px 5px grey;
+          box-shadow: 3px 3px 5px grey;
 }
 
 /*section fonction*/
@@ -267,6 +265,7 @@ body {
           align-items: center;
   background: white;
   border-radius: 5%;
+  position: relative;
   width: 300px;
   height: 200px;
   margin: 10px;
@@ -274,17 +273,6 @@ body {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   cursor: pointer;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
-}
-
-.restaurant .card:hover {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
 }
 
 .restaurant .card__img {
@@ -316,17 +304,30 @@ body {
   padding-left: 5px;
 }
 
-.restaurant .card__name .fa-heart {
-  padding-left: 120px;
-}
-
-.restaurant .card__name .fa-heart:active {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-}
-
 .restaurant .card__city {
   padding-left: 5px;
+}
+
+.restaurant .card .far {
+  position: absolute;
+  right: 5px;
+  bottom: 3px;
+}
+
+.restaurant .card:active {
+  display: none;
+}
+
+.restaurant .card .full {
+  display: none;
+}
+
+.restaurant .card:active {
+  display: inline;
+  position: absolute;
+  right: 5px;
+  bottom: 3px;
+  color: linear-gradient(#FF79DA, #9356DC);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -341,7 +342,10 @@ body {
   .card .new {
     left: 400px;
   }
-  .card .fa-heart {
+  .card .far {
+    padding-left: 300px;
+  }
+  .card .fas:active {
     padding-left: 300px;
   }
 }
@@ -379,7 +383,10 @@ body {
   .restaurant .card .new {
     left: 200px;
   }
-  .restaurant .card .fa-heart {
+  .restaurant .card .far {
+    padding-left: 120px;
+  }
+  .restaurant .card .fas {
     padding-left: 120px;
   }
 }
@@ -394,6 +401,12 @@ body {
           justify-content: center;
   height: 250px;
   width: 100%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .picture img {
+    width: 300px;
+  }
 }
 
 /*section menu*/
