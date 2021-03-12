@@ -115,61 +115,91 @@
         background: white;
         border-radius: 5%;
         position: relative;
-        width: 300px;
-        height: 200px;
-        margin:10px;
+        width: 90%;
+        height: 300px;
+        margin: 15px 0px;
         overflow: hidden;
         flex-shrink: 0;
         cursor: pointer;
         &__img{
             position: relative;
-            z-index: 1;
+            width: 100%;
+            height: 80%;
             img{
-            width: 300px;
-            height: 150px;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 15px 15px 0px 0px;
             } 
             .new{
-            position: relative;
-            bottom: 130px;
-            left: 200px;
-            color: #008766;
-            background: $colour-tertiary;
-            width: 80px;
-            text-align: center;
+                position: absolute;
+                top: 12px;
+                right: 12px;
+                color: #008766;
+                background: #99E2D0;
+                width: 80px;
+                text-align: center;
+                padding: 3px;
             }
         }
-        &__name--new{
-            margin-top: -15px;
-        }    
-        &__name{
-            font-weight: bold;
-            padding-left: 5px;
+        &__info{
+            height: 20%;
+            width: 100%;
+            padding: 5px;
+            text-decoration: none;
+            display: flex;
+            a{
+                height: 100%;
+                width: 80%;
+                text-decoration: none;
+            }
+            .text{
+            display: flex;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            }
+
+                .name{
+                font-weight: bold;
+                }
+            }    
+            .heart{
+                height: 100%;
+                width: 20%;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                .far.fa-heart{
+                    height: 25px;
+                    width: 25px;
+                    position: absolute;
+                    opacity: 1;
+                    z-index: 1;
+                }
+                .fas.fa-heart{
+                    height: 25px;
+                    width: 25px;
+                    position: absolute;
+                    opacity: 0;
+                    z-index: 2;
+                    background-clip: text;
+                    background: linear-gradient($colour-secondary,$colour-primary);
+                    font-size: 16px;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color:transparent;
+                }
+                .far.fa-heart:hover,.fas.fa-heart:hover{
+                    transition: opacity 1s;
+                    opacity: 1;
+                }
+            }
         
         }
-        &__city{
-            padding-left: 5px;
-        }
-        .far{
-            position: absolute;
-            right: 5px;
-            bottom: 3px;
-        }
-            &:active{
-            display: none;
-            }
-        .full{
-            display: none;
-            
-        }
-            &:active{
-            display: inline;    
-            position: absolute;
-            right: 5px;
-            bottom: 3px;
-            color: linear-gradient($colour-secondary,$colour-primary); 
-            }
-    }
 }
+
 
    @media screen and (min-width:768px)and (max-width:1024px){
         .card{
@@ -182,12 +212,7 @@
             .new{
                 left: 400px;   
             }
-            .far{
-                padding-left: 300px;
-            }  
-            .fas:active{
-                padding-left: 300px;
-            }      
+                 
         } 
     }
     @media screen and (min-width:1024px){
@@ -211,12 +236,7 @@
                 .new{
                     left: 200px;   
                 }
-                .far{
-                    padding-left: 120px;
-                }
-                .fas{
-                    padding-left: 120px;
-                }
+                
                         
             } 
 
