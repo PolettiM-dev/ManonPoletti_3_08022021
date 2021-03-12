@@ -78,6 +78,7 @@
         &:hover{
             background-color: #f5edff;
             transform:scale(1.15);
+            color: $colour-primary;
         }
         .btn__number{
             color: white;
@@ -89,8 +90,9 @@
             right: 15px;
             bottom: 5px;    
         } 
-        .fas:hover{
-            color: $colour-primary;
+       
+        .btn__description{
+            color:black;
         }  
     }
     

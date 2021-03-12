@@ -215,6 +215,7 @@ body {
   background-color: #f5edff;
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
+  color: #9356DC;
 }
 
 .fonction__btn .btn__number {
@@ -228,8 +229,8 @@ body {
   bottom: 5px;
 }
 
-.fonction__btn .fas:hover {
-  color: #9356DC;
+.fonction__btn .btn__description {
+  color: black;
 }
 
 /*section restaurant*/
