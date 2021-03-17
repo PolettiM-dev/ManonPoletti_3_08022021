@@ -37,15 +37,17 @@ body {
   margin: auto;
   margin-top: 100px;
   margin-bottom: 100px;
-  z-index: 1;
-  border: 16px solid #9356DC;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 16px solid #f6f6f6;
   width: 120px;
   height: 120px;
   border-top-color: #FF79DA;
   border-top-color: #9356DC;
   border-radius: 50%;
-  -webkit-animation: chargeur 4s linear infinite;
-          animation: chargeur 4s linear infinite;
+  -webkit-animation: opacity_reverse 500ms 3000ms linear both;
+  animation: chargeur 3s linear infinite;
 }
 
 @-webkit-keyframes chargeur {
