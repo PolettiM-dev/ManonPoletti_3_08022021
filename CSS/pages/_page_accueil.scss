@@ -106,13 +106,17 @@
     background: #f6f6f6;
     width: 100%;
     margin: 70px auto 0px;
-    
-    
+    max-width: 1200px;
     &__title{
     align-items: flex-start;
     padding: 10px 180px 10px 0px;
     }
-    .card{
+    .picture{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .card{
         align-items: center;
         background: white;
         border-radius: 5%;
@@ -199,15 +203,24 @@
                     opacity: 1;
                 }
             }
-        
+        }
         }
 }
 
 
-   @media screen and (min-width:700px){
-        .card{
+   @media (min-width:700px){
+        .picture{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .card{
             width: 45%;
-                  
-        } 
+            .img{
+                width: 45%;
+            }
+            
+            }
+        }
     }
     
