@@ -155,10 +155,11 @@
             text-decoration: none;
             color: black;
             display: flex;
-            a{
+            a, a:active{
                 height: 100%;
                 width: 80%;
                 text-decoration: none;
+                color: black;
             }
             .text{
             display: flex;
