@@ -97,6 +97,17 @@
     }
     
 }
+@media (min-width:1020px){
+    .container__btn{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .fonction__btn{
+                justify-content: space-around;
+                margin: 20px;
+            }
+    }
+}
 /*section restaurant*/
 .restaurant{
     display: flex;
@@ -210,18 +221,24 @@
 
 
    @media (min-width:700px){
-        .picture{
+       .restaurant{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: space-around;
-            .card{
-            width: 45%;
-            .img{
+       
+            .picture{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                .card{
                 width: 45%;
-            }
+                .img{
+                    width: 45%;
+                }
             
+                }
             }
-        }
+        }   
     }
     
