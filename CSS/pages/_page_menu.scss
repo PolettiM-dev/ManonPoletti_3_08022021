@@ -1,64 +1,128 @@
+body{
+margin: auto;
+background: #f6f6f6;
+}
+
+
+
 /*div picture*/
+
 .picture{
+    text-align: center;
     img{
-        display: flex;
-        justify-content: center;
         height: 250px;
         width: 100%;
+        max-width: 800px;
+        z-index: 2;
     }
 }
-@media screen and (min-width:768px)and (max-width:1024px){
-    .picture{
-        img{
-            width: 300px;
-        }
-    }
-}
+
 
 /*section menu*/
 .menu{
     background: #f6f6f6;
     border-radius: 25px 25px 0px 0px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    margin: 0px auto;
+    z-index: 1;
+    position: relative;
+    bottom: 55px;
+    .title{
+        display: flex;
+        justify-content: space-between;
+    }
     .far.fa-heart{
-        position: relative;
-        left: 80px;
+        
+        
+        opacity: 1;
+        z-index: 1;
+    }
+    .fas.fa-heart{
+       
+        opacity: 0;
+        z-index: 2;
+        background-clip: text;
+        background: linear-gradient($colour-secondary,$colour-primary);
+        font-size: 16px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+    }
+    .far.fa-heart:hover,.fas.fa-heart:hover{
+        transition: opacity 1s;
+        opacity: 1;
+    }
+    .food{
+        display: flex;
+        flex-direction: column;
     }
     .dish{
         border-bottom: solid $colour-tertiary;
         width: 40px;
-        margin-left: 10px;
+        margin-left: 30px;
+    }
+    .items__container{
+        width: 100%;
     }
     .items{
+        display: flex;
         background: white;
         border-radius: 25px;
         padding: 10px;
         margin: 20px;
-        .name{
+        flex-direction: row;
+        &__description{
             font-weight: bold;
             font-size: large;
-            padding-bottom: 5px;
+            width: 90%;
+            text-overflow: ellipsis;
     
         }  
-        .price{
-            position: relative;
-            bottom: 20px;
-            left: 280px;
+        &__price{
+            
             font-weight: bold;
+            display: flex;
+            align-items: flex-end;   
         }
+        &__icon{
+            display: flex;
+            align-items: center;
+            
+        }
+    }
+    .items:hover{
+        
     }
     .btn{
         color: white;
         text-align: center;
+        justify-content: center;
         border-radius: 25px;
         background: linear-gradient($colour-secondary,$colour-primary);
         margin: 20px;
         padding: 15px;
         cursor: pointer;
-        transform: scale(1);
-        transition: transform 400ms;
         &:hover{
-            transform:scale(1.15);
-        }    
+            background: linear-gradient(to top left, #a16be0, #ff93e1);
+            box-shadow: 3px 3px 5px grey;
+        } 
     }
 
+}
+@media (min-width:1020px){
+    
+    .menu{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 800px;
+        width: 100%; 
+    }
+    
+        .meal{
+           flex-direction: row;
+        } 
+           
+      
 }
