@@ -655,6 +655,47 @@ body {
   width: 100%;
 }
 
+.menu .items__entree {
+  -webkit-animation: apparition 8s 0.1s ease-out;
+          animation: apparition 8s 0.1s ease-out;
+}
+
+.menu .items__plat {
+  -webkit-animation: apparition 8s 1.5s ease-out;
+          animation: apparition 8s 1.5s ease-out;
+}
+
+.menu .items__dessert {
+  -webkit-animation: apparition 8s 2.5s ease-out;
+          animation: apparition 8s 2.5s ease-out;
+}
+
+@-webkit-keyframes apparition {
+  from {
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
 .menu .items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -663,10 +704,20 @@ body {
   border-radius: 25px;
   padding: 10px;
   margin: 20px;
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.menu .items .items:hover {
+  cursor: pointer;
+  -webkit-animation: rotate 0.5s;
+          animation: rotate 0.5s;
 }
 
 .menu .items__description {
@@ -674,6 +725,8 @@ body {
   font-size: large;
   width: 90%;
   text-overflow: ellipsis;
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 .menu .items__price {
@@ -693,6 +746,39 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 0px;
+  height: 80px;
+  width: 10%;
+  padding: 0px 5%;
+  border-radius: 0px 25px 25px 0px;
+  color: white;
+  background-color: #99E2D0;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
 }
 
 .menu .btn {
