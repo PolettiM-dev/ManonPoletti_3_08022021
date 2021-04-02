@@ -105,14 +105,18 @@ background: #f6f6f6;
         height: 80px;
         align-items: center;
         flex-direction: row;
-    &:hover .items__icon i{
         cursor: pointer;
+        overflow: hidden;
+    &:hover .items__icon i{
+        
+        
         animation: rotate 3s linear;
     }
     &:hover .items__icon{
         cursor: pointer;
-        transition: width 3s;
+        transition: width 1s;
         width: 10%;
+        opacity: 1;
     }
         &__description{
             font-weight: bold;
@@ -125,7 +129,8 @@ background: #f6f6f6;
             
             font-weight: bold;
             display: flex;
-            align-items: flex-end;     
+            align-items: flex-end;
+             
         }
         &__icon{
             display: flex;
@@ -139,14 +144,15 @@ background: #f6f6f6;
             border-radius: 0px 25px 25px 0px;
             color: white;
             background-color: $colour-tertiary; 
-            
+            opacity: 0;
+            transition-duration: .5s;
         }  
         @keyframes rotate{
             from{
                 transform:rotate(0deg);
             }
             to{
-                transform:rotate(720deg);
+                transform:rotate(360deg);
             }
         } 
     }
