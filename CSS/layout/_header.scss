@@ -1,5 +1,18 @@
+
 .logo{
     display: flex;
     justify-content: center;
     padding: 10px 0px 10px 0px;
+}
+
+.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    position: absolute;
+    left: 40px;
+    top: 15px;
+    font-size: 25px;
+    
 }
