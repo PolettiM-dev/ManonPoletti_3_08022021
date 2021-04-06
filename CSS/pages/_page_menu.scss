@@ -100,7 +100,7 @@ background: #f6f6f6;
         display: flex;
         background: white;
         border-radius: 25px;
-        padding: 10px;
+        padding: 10px 0px 10px 10px;
         margin: 20px;
         height: 80px;
         align-items: center;
@@ -115,15 +115,20 @@ background: #f6f6f6;
     &:hover .items__icon{
         cursor: pointer;
         transition: width 1s;
-        width: 10%;
+        width: 20%;
         opacity: 1;
     }
         &__description{
             font-weight: bold;
             font-size: large;
             width: 90%;
-            text-overflow: ellipsis;
+            overflow: hidden;
             transform-origin: left;
+            & h3, & h4{
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
         }  
         &__price{
             
@@ -136,7 +141,7 @@ background: #f6f6f6;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: absolute;
+            position: relative;
             right: 0px;
             height: 80px;
             width: 0px;
@@ -146,6 +151,7 @@ background: #f6f6f6;
             background-color: $colour-tertiary; 
             opacity: 0;
             transition-duration: .5s;
+            margin-left: 10px;
         }  
         @keyframes rotate{
             from{

@@ -739,7 +739,7 @@ body {
   display: flex;
   background: white;
   border-radius: 25px;
-  padding: 10px;
+  padding: 10px 0px 10px 10px;
   margin: 20px;
   height: 80px;
   -webkit-box-align: center;
@@ -762,7 +762,7 @@ body {
   cursor: pointer;
   -webkit-transition: width 1s;
   transition: width 1s;
-  width: 10%;
+  width: 20%;
   opacity: 1;
 }
 
@@ -770,9 +770,15 @@ body {
   font-weight: bold;
   font-size: large;
   width: 90%;
-  text-overflow: ellipsis;
+  overflow: hidden;
   -webkit-transform-origin: left;
           transform-origin: left;
+}
+
+.menu .items__description h3, .menu .items__description h4 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .menu .items__price {
@@ -795,7 +801,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
+  position: relative;
   right: 0px;
   height: 80px;
   width: 0px;
@@ -806,6 +812,7 @@ body {
   opacity: 0;
   -webkit-transition-duration: .5s;
           transition-duration: .5s;
+  margin-left: 10px;
 }
 
 @-webkit-keyframes rotate {
