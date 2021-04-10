@@ -693,27 +693,26 @@ body {
 }
 
 .menu .items__entree {
-  -webkit-animation: apparition 8s 0.1s ease-out;
-          animation: apparition 8s 0.1s ease-out;
+  -webkit-animation: apparition  1s 0s ease-out;
+          animation: apparition  1s 0s ease-out;
 }
 
 .menu .items__plat {
-  -webkit-animation: apparition 8s 1.5s ease-out;
-          animation: apparition 8s 1.5s ease-out;
+  -webkit-animation: apparition  1.6s 0s ease-out;
+          animation: apparition  1.6s 0s ease-out;
 }
 
 .menu .items__dessert {
-  -webkit-animation: apparition 8s 2.5s ease-out;
-          animation: apparition 8s 2.5s ease-out;
+  -webkit-animation: apparition  2.4s 0s ease-out;
+          animation: apparition  2.4s 0s ease-out;
 }
 
 @-webkit-keyframes apparition {
-  from {
-    opacity: 0;
+  0% {
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
   }
-  to {
+  100% {
     opacity: 1;
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
@@ -721,12 +720,11 @@ body {
 }
 
 @keyframes apparition {
-  from {
-    opacity: 0;
+  0% {
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
   }
-  to {
+  100% {
     opacity: 1;
     -webkit-transform: scaleX(1);
             transform: scaleX(1);

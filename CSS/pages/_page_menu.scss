@@ -77,25 +77,33 @@ background: #f6f6f6;
        
     }
     .items__entree{
-        animation: apparition 8s 0.1s ease-out;
+        animation: apparition  1s 0s ease-out;
+    
+        
     }
     .items__plat{
-        animation: apparition 8s 1.5s ease-out;
+        animation: apparition  1.6s 0s ease-out;
+      
+        
     }
     .items__dessert{
-        animation: apparition 8s 2.5s ease-out;
+        animation: apparition  2.4s 0s ease-out;
+   
+        
     }
     @keyframes apparition {
-        from{
-            opacity: 0;
+        0%{
+           
             transform: scaleX(0);
         }
-        to{
+        100%{
+
             opacity: 1;
             transform: scaleX(1);
         }
         
     }
+    
     .items{
         display: flex;
         background: white;
@@ -108,7 +116,7 @@ background: #f6f6f6;
         cursor: pointer;
         overflow: hidden;
     &:hover .items__icon i{
-        
+
         
         animation: rotate 3s linear;
     }
